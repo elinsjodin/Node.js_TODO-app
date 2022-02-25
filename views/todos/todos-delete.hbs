@@ -1,0 +1,18 @@
+<h2>Confirm Delete Task</h2>
+
+<div class="lines-2"><div class="diamond"></div></div>
+
+<div class="confirm-delete-div">
+  <p><b>Task: </b>{{task}}</p>
+  <p><b>Created: </b>{{created}}</p>
+  {{#if done}}
+    <p><b>Status: </b>Completed</p>
+  {{else}}
+    <p><b>Status: </b>Uncompleted</p>
+  {{/if}}
+</div>
+
+<form action="/todos/{{_id}}/delete" method="post" class="delete-form">
+  <input type="submit" value="Delete" class="btn" />
+  <a href="/todos/{{_id}}/" class="btn">Cancel</a>
+</form>

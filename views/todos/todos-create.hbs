@@ -1,0 +1,11 @@
+<h2>New Todo</h2>
+
+<div class="lines-2"><div class="diamond"></div></div>
+
+<p class="error">{{error}}</p>
+
+<form action="/todos/new" method="post">
+  <input type="text" name="task" placeholder="Task" />
+  <input type="submit" value="Add Task" class="btn" />
+  <a href="/todos/" class="btn">View Todo List</a>
+</form>

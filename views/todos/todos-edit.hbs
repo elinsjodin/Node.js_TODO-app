@@ -1,0 +1,16 @@
+<h2>Edit Task</h2>
+
+<div class="lines-2"><div class="diamond"></div></div>
+
+<p class="error">{{error}}</p>
+
+<form action="/todos/{{_id}}/edit" method="post">
+  <input type="text" name="task" placeholder="Task" value="{{task}}" />
+  <label for="checkbox" class="btn">Mark as Done
+    <input type="checkbox" name="checkbox" class="check" /></label>
+
+  <input type="submit" value="Confirm" class="btn" />
+  <div class="todo-edit-buttons">
+    <span><a href="/todos/{{_id}}" class="btn">Cancel</a></span>
+  </div>
+</form>

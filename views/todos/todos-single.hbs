@@ -1,0 +1,19 @@
+<h2>Task</h2>
+
+<div class="lines-2"><div class="diamond"></div></div>
+
+<div class="todo-single">
+  <p><b>Task: </b>{{task}}</p>
+  <p><b>Created: </b>{{created}}</p>
+  {{#if done}}
+    <p><b>Status: </b>Completed</p>
+  {{else}}
+    <p><b>Status: </b>Uncompleted</p>
+  {{/if}}
+</div>
+
+<div class="todo-single-buttons">
+  <a href="/todos/{{_id}}/edit" class="edit-todo">Edit task</a>
+  <a href="/todos/{{_id}}/delete" class="delete-todo">Delete task</a>
+  <a href="/todos/" class="btn">View Todo List</a>
+</div>

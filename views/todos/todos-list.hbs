@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="todo-box">
+
+    <h2>Todo List</h2>
+
+    <div class="lines"><div class="diamond"></div></div>
+
+    <form action="/todos" method="post">
+      <div class="btns-container">
+        <a href="/todos/" class="show-all-tasks">All</a>
+        <a href="/todos/completed" class="completed-tasks">Completed</a>
+        <a href="/todos/uncompleted" class="unCompleted-tasks">Uncompleted</a>
+        <a href="/todos/newest" class="sort-tasks-by-newest-date">Newest</a>
+        <a href="/todos/oldest" class="sort-tasks-by-oldest-date">Oldest</a>
+        <a href="/todos/new" class="new-todo">New Task</a>
+      </div>
+    </form>
+
+    <ul>
+      {{#each todos}}
+        <li class="{{#if done}}taskDone{{/if}}"><a href="/todos/{{_id}}" class="todo">{{task}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
